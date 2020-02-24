@@ -10,31 +10,31 @@ public class BankingApplication {
 }
 
 class BankAccount {
-    int balance;
-    int previousTransaction;
-    String customerName;
-    String customerId;
+    private int balance;
+    private int previousTransaction;
+    private String customerName;
+    private String customerId;
 
     BankAccount(String cname, String cid){
         customerName = cname;
         customerId = cid;
     }
 
-    void deposit(int amount) {
+    private void deposit(int amount) {
         if (amount != 0) {
             balance = balance + amount;
             previousTransaction = amount;
         }
     }
 
-    void withdraw(int amount) {
+    private void withdraw(int amount) {
         if(amount !=0){
             balance = balance - amount;
             previousTransaction = -amount;
         }
     }
 
-    void getPreviousTransaction() {
+    private void getPreviousTransaction() {
         if (previousTransaction > 0) {
             System.out.println("You deposited: " + previousTransaction);
         }
@@ -46,7 +46,7 @@ class BankAccount {
         }
     }
 
-    void showTransactionMenu() {
+    public void showTransactionMenu() {
         char transactionOption = '\0';
         Scanner scanner = new Scanner(System.in);
 
