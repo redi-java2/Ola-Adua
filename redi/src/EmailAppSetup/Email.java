@@ -12,6 +12,7 @@ public class Email {
     private int defaultPasswordLength = 10;
     private String alternateEmail;
     private String companyWWebAdd = "gamail.com";
+
     public Email(String fName, String lName) {
         firstName = fName;
         lastName = lName;
